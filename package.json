@@ -1,0 +1,58 @@
+{
+  "publisher": "AbdullahKhrais",
+  "icon": "images/riada.jpg",
+  "name": "flutter-font-generator",
+  "displayName": "riada: flutter fonts generator",
+  "description": "later",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:flutter-font-generator.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createFontFolder",
+        "title": "font size generator"
+      }, {
+        "command": "extension.openFontGenerate",
+        "title": "font family generator"
+      }
+    ]
+  
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "fs-extra": "^11.1.1",
+    "js-yaml": "^4.1.0"
+  }
+}
